@@ -101,6 +101,45 @@ They will be auto-loaded by the add-on.
 
 ***
 
+Adding softwareversionreporter-alpha-0.0.1.zap Add-on in Windows
+Download the Add-on File
+Download the add-on package from:
+softwareversionreporter-alpha-0.0.1.zap
+
+Locate the .ZAP\plugin Folder
+
+Open File Explorer.
+
+Navigate to your user home directory, usually:
+
+text
+C:\Users\<YourUsername>\.ZAP\plugin
+If .ZAP or .ZAP\plugin does not exist, create those folders manually.
+
+Copy the .zap File
+
+Copy the downloaded softwareversionreporter-alpha-0.0.1.zap file into the plugin folder.
+
+Restart OWASP ZAP
+
+Close and restart ZAP to load the newly added extension automatically.
+
+Verify Installation
+
+In ZAP, go to the Add-ons panel.
+
+You should see Software Version Reporter listed as installed/enabled.
+
+Optional: Alternative Installation
+If you prefer not to manually copy:
+
+In ZAP, use Tools → Add-ons → Install Add-on File... and select the downloaded .zap file.
+
+This installs it under the proper user .ZAP directory internally.
+
+
+***
+
 ## Contribution & Contact
 
 Created and maintained by Raghavendra Patil.
@@ -118,3 +157,4 @@ Pull requests, issues, and feature requests are welcome.
 
 
 ***
+
