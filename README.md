@@ -1,5 +1,3 @@
-Here is the updated clean and concise README in Markdown format with the **Logging section removed**, and a detailed **API Keys configuration and usage tutorial** added, including placeholders for screenshots:
-
 ***
 
 # Software Version Reporter - OWASP ZAP Add-on
@@ -115,10 +113,8 @@ Pull requests, issues, and feature requests are welcome.
 
 ***
 
-## License
 
-Licensed under Apache 2.0 License. See LICENSE file.
+
+
 
 ***
-
-Let me know if you need help preparing any of the screenshots or additional sections!
