@@ -1,0 +1,588 @@
+#regex	type	software	vendor	product
+#regex	type	software	vendor	product
+^Apache/([\d.]+)	header	Apache	apache	http_server
+^nginx/([\d.]+)	header	nginx	f5	nginx
+^Microsoft-IIS/([\d.]+)	header	IIS	microsoft	iis
+^lighttpd/([\d.]+)	header	lighttpd	lighttpd	lighttpd
+^LiteSpeed/([\d.]+)	header	LiteSpeed	litespeedtech	litespeed_web_server
+^openresty/([\d.]+)	header	OpenResty	openresty	openresty
+^Caddy/([\d.]+)	header	Caddy	caddyserver	caddy
+^gunicorn/([\d.]+)	header	gunicorn	gunicorn	gunicorn
+^uWSGI/([\d.]+)	header	uWSGI	uwsgi	uwsgi
+^Werkzeug/([\d.]+)	header	Werkzeug	palletsprojects	werkzeug
+^Jetty\([\d.]+)	header	Jetty	eclipse	jetty
+^Jetty/([\d.]+)	header	Jetty	eclipse	jetty
+^Apache-Coyote/([\d.]+)	header	Tomcat	apache	tomcat
+^Tomcat/([\d.]+)	header	Tomcat	apache	tomcat
+^WildFly/([\d.]+)	header	WildFly	redhat	wildfly
+^JBoss[-/]([\d.]+)	header	JBoss	redhat	jboss
+^GlassFish[\s-]+Server[\s-]+Open[\s-]+Source[\s-]+Edition[\s-]+([\d.]+)	header	GlassFish	oracle	glassfish
+^Resin/([\d.]+)	header	Resin	caucho	resin
+^Payara[\s-]+Server/([\d.]+)	header	Payara Server	payara	payara_server
+^Payara[\s-]+Micro/([\d.]+)	header	Payara Micro	payara	payara_micro
+^Oracle[\s-]+WebLogic[\s-]+Server/([\d.]+)	header	WebLogic	oracle	weblogic
+^WebLogic/([\d.]+)	header	WebLogic	oracle	weblogic
+^IBM[\s-]+WebSphere[\s-]+Application[\s-]+Server/([\d.]+)	header	WebSphere	ibm	websphere
+^WebSphere/([\d.]+)	header	WebSphere	ibm	websphere
+^Apache[\s-]+Traffic[\s-]+Server/([\d.]+)	header	Apache Traffic Server	apache	traffic_server
+^Varnish/([\d.]+)	header	Varnish	varnish	varnish_cache
+Via: *Varnish/([\d.]+)	header	Varnish	varnish	varnish_cache
+^Squid/([\d.]+)	header	Squid	squid-cache	squid
+Via: *HTTP/[\d.]+ *([Ss]quid)/([\d.]+)	header	Squid	squid-cache	squid
+^HAProxy/?([\d.]+)	header	HAProxy	haproxy	haproxy
+^Kong/?([\d.]+)	header	Kong	kong	kong_gateway
+^Traefik/?([\d.]+)	header	Traefik	traefik	traefik
+^Envoy/?([\d.]+)	header	Envoy	envoyproxy	envoy
+^CouchDB/([\d.]+)	header	CouchDB	apache	couchdb
+^RabbitMQ/([\d.]+)	header	RabbitMQ	rabbitmq	rabbitmq
+^ActiveMQ/([\d.]+)	header	ActiveMQ	apache	activemq
+^Erlang/OTP/([\d.]+)	header	Erlang OTP	erlang	erlang_otp
+^AmazonS3/([\d.]+)	header	Amazon S3	amazon	amazon_s3
+^GitHub\.com/([\d.]+)	header	GitHub Pages	github	github_pages
+^GitHub-Proxy/([\d.]+)	header	GitHub Proxy	github	github_proxy
+^Netlify/([\d.]+)	header	Netlify	netlify	netlify
+^Vercel/([\d.]+)	header	Vercel	vercel	vercel
+^FirebaseHosting/([\d.]+)	header	Firebase Hosting	google	firebase_hosting
+^Fly\.io/([\d.]+)	header	Fly.io	flyio	flyio
+^Railway/([\d.]+)	header	Railway	railway	railway
+^Render/([\d.]+)	header	Render	render	render
+^GWS/([\d.]+)	header	Google Web Server	google	gws
+^Google Frontend/([\d.]+)	header	Google Frontend	google	google_frontend
+^Cloudflare-Workers/([\d.]+)	header	Cloudflare Workers	cloudflare	cloudflare_workers
+^CloudFront/([\d.]+)	header	CloudFront	amazon	cloudfront
+^AkamaiGHost/([\d.]+)	header	Akamai	akamai	akamai
+^Fastly/([\d.]+)	header	Fastly	fastly	fastly
+^Sucuri/Cloudproxy WAF/([\d.]+)	header	Sucuri WAF	sucuri	sucuri_waf
+X-Sucuri-ID: *([\d.]+)	header	Sucuri WAF	sucuri	sucuri_waf
+X-Sucuri-Block: *([\d.]+)	header	Sucuri WAF	sucuri	sucuri_waf
+^Reblaze/([\d.]+)	header	Reblaze WAF	reblaze	reblaze_waf
+^mod_security/([\d.]+)	header	ModSecurity	trustwave	modsecurity
+X-Mod-Security: *([\d.]+)	header	ModSecurity	trustwave	modsecurity
+^FortiWeb/([\d.]+)	header	Fortinet FortiWeb	fortinet	fortiweb
+^BarracudaWAF/([\d.]+)	header	Barracuda WAF	barracuda	barracuda_waf
+^F5 BIG-IP/([\d.]+)	header	F5 BIG-IP WAF	f5	bigip_waf
+^RadwareWAF/([\d.]+)	header	Radware WAF	radware	radware_waf
+^SiteLock/([\d.]+)	header	SiteLock WAF	sitelock	sitelock_waf
+^CloudArmor/([\d.]+)	header	Google Cloud Armor	google	cloud_armor
+^AzureFrontDoor/([\d.]+)	header	Azure Front Door	microsoft	azure_frontdoor
+^AWSWAF/([\d.]+)	header	AWS WAF	amazon	aws_waf
+^Wallarm/([\d.]+)	header	Wallarm WAF	wallarm	wallarm_waf
+^ThreatX/([\d.]+)	header	ThreatX WAF	threatx	threatx_waf
+^Cequence/([\d.]+)	header	Cequence WAF	cequence	cequence_waf
+^AppTrana/([\d.]+)	header	AppTrana WAF	apptrana	apptrana_waf
+X-WAF: *Cloudflare/([\d.]+)	header	Cloudflare WAF	cloudflare	cloudflare_waf
+X-WAF: *Imperva/([\d.]+)	header	Imperva WAF	imperva	imperva_waf
+X-WAF: *Akamai/([\d.]+)	header	Akamai WAF	akamai	akamai_waf
+X-WAF: *Fastly/([\d.]+)	header	Fastly WAF	fastly	fastly_waf
+X-Powered-By: *PHP/([\d.]+)	header	PHP	php	php
+X-Powered-By: *ASP\.NET/?([\d.]+)?	header	ASP.NET	microsoft	aspnet
+X-Powered-By: *ASP\.NET Core/?([\d.]+)?	header	ASP.NET Core	microsoft	aspnet_core
+X-Powered-By: *Node\.js/([\d.]+)	header	Node.js	nodejs	node.js
+X-Powered-By: *Express/?([\d.]+)?	header	Express	expressjs	express
+X-Powered-By: *Next\.js/?([\d.]+)?	header	Next.js	vercel	next.js
+X-Powered-By: *Nuxt\.js/?([\d.]+)?	header	Nuxt.js	nuxt	nuxt.js
+X-Powered-By: *NestJS/?([\d.]+)?	header	NestJS	nestjs	nestjs
+X-Powered-By: *Koa/?([\d.]+)?	header	Koa	nodejs	koa
+X-Powered-By: *Sails/?([\d.]+)?	header	Sails	sailsjs	sails
+X-Powered-By: *Meteor/?([\d.]+)?	header	Meteor	meteor	meteor
+X-Powered-By: *Django/([\d.]+)	header	Django	djangoproject	django
+X-Powered-By: *Rails/([\d.]+)	header	Ruby on Rails	rubyonrails	rails
+X-Powered-By: *Laravel/([\d.]+)	header	Laravel	laravel	laravel
+X-Powered-By: *Symfony/([\d.]+)	header	Symfony	symfony	symfony
+X-Powered-By: *CakePHP/([\d.]+)	header	CakePHP	cakephp	cakephp
+X-Powered-By: *CodeIgniter/([\d.]+)	header	CodeIgniter	codeigniter	codeigniter
+X-Powered-By: *Yii Framework/([\d.]+)	header	Yii	yiisoft	yii
+X-Powered-By: *Zend Framework/([\d.]+)	header	Zend Framework	zend	zend_framework
+X-Powered-By: *Phalcon/([\d.]+)	header	Phalcon	phalcon	phalcon
+X-Powered-By: *Hapi/([\d.]+)	header	Hapi	hapijs	hapi
+X-Powered-By: *Koa/([\d.]+)	header	Koa	koajs	koa
+X-Powered-By: *Sails/([\d.]+)	header	Sails	sailsjs	sails
+X-Powered-By: *Python/([\d.]+)	header	Python	python	python
+X-Powered-By: *Ruby/([\d.]+)	header	Ruby	ruby	ruby
+X-Powered-By: *Perl/([\d.]+)	header	Perl	perl	perl
+X-Powered-By: *Go/([\d.]+)	header	Go	golang	go
+X-Powered-By: *Java/([\d._]+)	header	Java	oracle	java
+X-Powered-By: *Mono/([\d.]+)	header	Mono	mono	mono
+X-Powered-By: *OpenResty/([\d.]+)	header	OpenResty	openresty	openresty
+X-Powered-By: *Phusion Passenger /([\d.]+)	header	Phusion Passenger	phusion	passenger
+X-Powered-By: *ASP\.NET MVC/([\d.]+)	header	ASP.NET MVC	microsoft	aspnet_mvc
+X-Powered-By: *UmbracoCMS/([\d.]+)	header	Umbraco	umbraco	umbraco_cms
+X-Umbraco-Version: *([\d.]+)	header	Umbraco	umbraco	umbraco_cms
+X-Generator: *Umbraco CMS	header	Umbraco	umbraco	umbraco_cms
+X-Generator: *OrchardCore/([\d.]+)	header	Orchard Core	orchard	orchard_core
+X-Powered-By: *Sitecore CMS	header	Sitecore	sitecore	sitecore_cms
+X-AspNet-Version: *([\d.]+)	header	ASP.NET	microsoft	aspnet
+X-AspNetMvc-Version: *([\d.]+)	header	ASP.NET MVC	microsoft	aspnet_mvc
+X-Generator: *WordPress ([\d.]+)	header	WordPress	wordpress	wordpress
+X-Generator: *Drupal ([\d.]+)	header	Drupal	drupal	drupal
+X-Generator: *Joomla! ([\d.]+)	header	Joomla	joomla	joomla
+X-Generator: *Magento(?: Commerce)? ([\d.]+)	header	Magento	magento	magento
+X-Generator: *PrestaShop ([\d.]+)	header	Prestashop	prestashop	prestashop
+X-Generator: *TYPO3(?: CMS)? ([\d.]+)	header	TYPO3	typo3	typo3
+X-Generator: *Moodle ([\d.]+)	header	Moodle	moodle	moodle
+X-Generator: *MediaWiki ([\d.]+)	header	MediaWiki	wikimedia	mediawiki
+X-Generator: *Shopify ([\d.]+)	header	Shopify	shopify	shopify
+X-Generator: *BigCommerce ([\d.]+)	header	BigCommerce	bigcommerce	bigcommerce
+X-Generator: *Ghost ([\d.]+)	header	Ghost	ghost	ghost
+X-Generator: *Grav ([\d.]+)	header	Grav	getgrav	grav
+X-Generator: *Concrete5 ([\d.]+)	header	Concrete5	concretecms	concrete_cms
+X-Generator: *ExpressionEngine ([\d.]+)	header	ExpressionEngine	expressionengine	expressionengine
+X-Content-Encoded-By: *Joomla! ([\d.]+)	header	Joomla	joomla	joomla
+X-Powered-By-Plesk: *PleskLin/?([\d.]+)?	header	Plesk	plesk	plesk
+X-Powered-By-Plesk: *PleskWin/?([\d.]+)?	header	Plesk	plesk	plesk
+X-Powered-By: *WP Engine/([\d.]+)	header	WP Engine	wpengine	wp_engine
+X-Powered-By: *PleskLin/?([\d.]+)?	header	Plesk	plesk	plesk
+X-Powered-By: *PleskWin/?([\d.]+)?	header	Plesk	plesk	plesk
+X-Powered-By: *cPanel/WHM/([\d.]+)	header	cPanel	cpanel	cpanel_whm
+X-Powered-By: *DirectAdmin/([\d.]+)	header	DirectAdmin	directadmin	directadmin
+X-Powered-By: *ISPConfig ([\d.]+)	header	ISPConfig	ispconfig	ispconfig
+X-Powered-By: *Virtualmin ([\d.]+)	header	Virtualmin	virtualmin	virtualmin
+X-Hosting-Provider: *WP Engine/([\d.]+)	header	WP Engine	wpengine	wp_engine
+X-Hosting-Provider: *Kinsta/([\d.]+)	header	Kinsta	kinsta	kinsta
+X-Hosting-Provider: *Flywheel/([\d.]+)	header	Flywheel	flywheel	flywheel_hosting
+X-Hosting-Provider: *Cloudways/([\d.]+)	header	Cloudways	cloudways	cloudways
+X-Hosting-Provider: *Pantheon/([\d.]+)	header	Pantheon	pantheon	pantheon
+X-Hosting-Provider: *Acquia Cloud/([\d.]+)	header	Acquia	acquia	acquia_cloud
+X-Hosting-Provider: *Platform\.sh/([\d.]+)	header	Platform.sh	platformsh	platform_sh
+X-Engine: *WP Engine/([\d.]+)	header	WP Engine	wpengine	wp_engine
+X-Engine: *Wix\.com/([\d.]+)	header	Wix	wix	wix_engine
+X-Engine: *Squarespace/([\d.]+)	header	Squarespace	squarespace	squarespace_engine
+X-Generator: *Webflow ([\d.]+)	header	Webflow	webflow	webflow
+X-Generator: *Wix\.com Website Builder ([\d.]+)	header	Wix	wix	wix
+X-Generator: *Squarespace ([\d.]+)	header	Squarespace	squarespace	squarespace
+X-Generator: *Shopify ([\d.]+)	header	Shopify	shopify	shopify
+X-Generator: *Ghost ([\d.]+)	header	Ghost	ghost	ghost
+X-Generator: *Strapi ([\d.]+)	header	Strapi	strapi	strapi
+X-Generator: *Contentful ([\d.]+)	header	Contentful	contentful	contentful
+X-Generator: *Sanity ([\d.]+)	header	Sanity	sanity	sanity
+X-Generator: *Storyblok ([\d.]+)	header	Storyblok	storyblok	storyblok
+X-Generator: *HubSpot CMS ([\d.]+)	header	HubSpot CMS	hubspot	hubspot_cms
+X-Generator: *Jekyll ([\d.]+)	header	Jekyll	jekyll	jekyll
+X-Generator: *Hugo ([\d.]+)	header	Hugo	hugo	hugo
+X-Generator: *Gatsby ([\d.]+)	header	Gatsby	gatsby	gatsby
+X-Generator: *Next\.js ([\d.]+)	header	Next.js	vercel	next.js
+X-Generator: *Nuxt\.js ([\d.]+)	header	Nuxt.js	nuxt	nuxt.js
+X-Generator: *Laravel ([\d.]+)	header	Laravel	laravel	laravel
+X-Powered-By: *ColdFusion/([\d.]+)	header	ColdFusion	adobe	coldfusion
+X-Powered-By: *CFML/([\d.]+)	header	CFML	adobe	cfml
+X-Powered-By: *WP Engine/([\d.]+)	header	WP Engine	wpengine	wp_engine
+X-Powered-By: *PleskLin/?([\d.]+)?	header	Plesk	plesk	plesk
+X-Powered-By: *PleskWin/?([\d.]+)?	header	Plesk	plesk	plesk
+X-Powered-By: *cPanel/WHM/([\d.]+)	header	cPanel	cpanel	cpanel_whm
+X-Powered-By: *DirectAdmin/([\d.]+)	header	DirectAdmin	directadmin	directadmin
+X-Powered-By: *ISPConfig ([\d.]+)	header	ISPConfig	ispconfig	ispconfig
+X-Powered-By: *Virtualmin ([\d.]+)	header	Virtualmin	virtualmin	virtualmin
+X-Powered-By: *Cloudways/([\d.]+)	header	Cloudways	cloudways	cloudways
+X-Powered-By: *Pantheon/([\d.]+)	header	Pantheon	pantheon	pantheon
+X-Powered-By: *Acquia Cloud/([\d.]+)	header	Acquia	acquia	acquia_cloud
+X-Powered-By: *Platform\.sh/([\d.]+)	header	Platform.sh	platformsh	platform_sh
+X-Powered-By: *PleskObsidian ([\d.]+)	header	Plesk	plesk	plesk_obsidian
+X-Powered-By: *PleskPanel ([\d.]+)	header	Plesk	plesk	plesk_panel
+X-Powered-By: *cPanel/WHM/([\d.]+)	header	cPanel	cpanel	cpanel_whm
+X-Powered-By: *DirectAdmin/([\d.]+)	header	DirectAdmin	directadmin	directadmin
+X-Powered-By: *ISPConfig ([\d.]+)	header	ISPConfig	ispconfig	ispconfig
+X-Powered-By: *Virtualmin ([\d.]+)	header	Virtualmin	virtualmin	virtualmin
+X-Powered-By: *Cloudways/([\d.]+)	header	Cloudways	cloudways	cloudways
+X-Powered-By: *Pantheon/([\d.]+)	header	Pantheon	pantheon	pantheon
+X-Powered-By: *Acquia Cloud/([\d.]+)	header	Acquia	acquia	acquia_cloud
+X-Powered-By: *Platform\.sh/([\d.]+)	header	Platform.sh	platformsh	platform_sh
+X-Powered-By: *WP Engine/([\d.]+)	header	WP Engine	wpengine	wp_engine
+X-Powered-By: *Kinsta/([\d.]+)	header	Kinsta	kinsta	kinsta
+X-Powered-By: *Flywheel/([\d.]+)	header	Flywheel	flywheel	flywheel_hosting
+X-Powered-By: *Cloudways/([\d.]+)	header	Cloudways	cloudways	cloudways
+X-Powered-By: *Pantheon/([\d.]+)	header	Pantheon	pantheon	pantheon
+X-Powered-By: *Acquia Cloud/([\d.]+)	header	Acquia	acquia	acquia_cloud
+X-Powered-By: *Platform\.sh/([\d.]+)	header	Platform.sh	platformsh	platform_sh
+X-Powered-By: *WP Engine/([\d.]+)	header	WP Engine	wpengine	wp_engine
+X-Powered-By: *Kinsta/([\d.]+)	header	Kinsta	kinsta	kinsta
+X-Powered-By: *Flywheel/([\d.]+)	header	Flywheel	flywheel	flywheel_hosting
+X-Powered-By: *Cloudways/([\d.]+)	header	Cloudways	cloudways	cloudways
+X-Powered-By: *Pantheon/([\d.]+)	header	Pantheon	pantheon	pantheon
+X-Powered-By: *Acquia Cloud/([\d.]+)	header	Acquia	acquia	acquia_cloud
+X-Powered-By: *Platform\.sh/([\d.]+)	header	Platform.sh	platformsh	platform_sh
+^Aged-Platform: *ColdFusion/([\d.]+)	body	ColdFusion	adobe	coldfusion
+^Deprecated-Lib: *OpenSSL/([\d.]+)	body	OpenSSL	openssl	openssl
+^EndOfLife-Package: *Joomla/([\d.]+)	body	Joomla	joomla	joomla
+^Legacy-App: *Rails/([\d.]+)	body	Ruby on Rails	rubyonrails	rails
+^Old-Framework: *Django/([\d.]+)	body	Django	djangoproject	django
+^Outdated-Engine: *NodeJS/([\d.]+)	body	Node.js	nodejs	node.js
+^Unpatched-Module: *Drupal/([\d.]+)	body	Drupal	drupal	drupal
+^Vintage-System: *IIS/([\d.]+)	body	IIS	microsoft	iis
+^Vulnerable: *Tomcat/([\d.]+)	body	Tomcat	apache	tomcat
+^Framework: *Laravel/([\d.]+)	body	Laravel	laravel	laravel
+^Database: *MySQL/([\d.]+)	body	MySQL	oracle	mysql
+^Backend: *AppEngineLite/([\d.]+)	body	AppEngineLite	generic	appenginelite
+^Builder: *SiteMaster/([\d.]+)	body	SiteMaster	generic	sitemaster
+^CMS: *BrightPage/([\d.]+)	body	BrightPage	generic	brightpage
+^CMS2: *SoftCMSLite/([\d.]+)	body	SoftCMSLite	generic	softcmslite
+^CMS3: *UltraCMSNano/([\d.]+)	body	UltraCMSNano	generic	ultracmsnano
+^CMS4: *PageCMSCore/([\d.]+)	body	PageCMSCore	generic	pagecmscore
+^Console: *WebAdminNova/([\d.]+)	body	WebAdminNova	generic	webadminnova
+^Editor: *NetEdit/([\d.]+)	body	NetEdit	generic	netedit
+^Frontend: *WebCraft/([\d.]+)	body	WebCraft	generic	webcraft
+^JS-App1: *ScriptHubLite/([\d.]+)	body	ScriptHubLite	generic	scripthublite
+^JS-App2: *NodePortalMini/([\d.]+)	body	NodePortalMini	generic	nodeportalmini
+^JS-App3: *VueBoardX/([\d.]+)	body	VueBoardX	generic	vueboardx
+^JS-App4: *ReactPanelPro/([\d.]+)	body	ReactPanelPro	generic	reactpanelpro
+^JS-App5: *ExpressLite/([\d.]+)	body	ExpressLite	generic	expresslite
+^Service: *CloudPanelMini/([\d.]+)	body	CloudPanelMini	generic	cloudpanelmini
+^Web-App1: *WebPanelX/([\d.]+)	body	WebPanelX	generic	webpanelx
+^Web-App2: *SiteForgeLite/([\d.]+)	body	SiteForgeLite	generic	siteforgelite
+^Web-App3: *PortalMaker/([\d.]+)	body	PortalMaker	generic	portalmaker
+^Web-App4: *CloudCMSAlpha/([\d.]+)	body	CloudCMSAlpha	generic	cloudcmsalpha
+^Web-App5: *FormBuilderLite/([\d.]+)	body	FormBuilderLite	generic	formbuilderlite
+^Web-App6: *NetDashboardPro/([\d.]+)	body	NetDashboardPro	generic	netdashboardpro
+^Web-App7: *ContentHubMini/([\d.]+)	body	ContentHubMini	generic	contenthubmini
+^Web-App8: *WebFlowSystem/([\d.]+)	body	WebFlowSystem	generic	webflowsystem
+^Web-App9: *UltraSiteCore/([\d.]+)	body	UltraSiteCore	generic	ultrasitecore
+^Web-App10: *PageCraftLite/([\d.]+)	body	PageCraftLite	generic	pagecraftlite
+^WebSuite: *SkyPortal/([\d.]+)	body	SkyPortal	generic	skyportal
+^Ruby/([\d.]+)	body	Ruby	ruby	ruby
+Ruby\s+([\d.]+)	body	Ruby	ruby	ruby
+^Java/([\d._]+)	body	Java	oracle	java
+Java\s+([\d._]+)	body	Java	oracle	java
+^PHP/([\d.]+)	body	PHP	php	php
+PHP\s+([\d.]+)	body	PHP	php	php
+^Python/([\d.]+)	body	Python	python	python
+Python\s+([\d.]+)	body	Python	python	python
+^Node\.js/([\d.]+)	body	Node.js	nodejs	node.js
+Node\.js\s+([\d.]+)	body	Node.js	nodejs	node.js
+^Perl/([\d.]+)	body	Perl	perl	perl
+Perl\s+([\d.]+)	body	Perl	perl	perl
+^Go/([\d.]+)	body	Go	golang	go
+Go\s+([\d.]+)	body	Go	golang	go
+^Mono/([\d.]+)	body	Mono	mono	mono
+Mono\s+([\d.]+)	body	Mono	mono	mono
+^Rails/([\d.]+)	body	Ruby on Rails	rubyonrails	rails
+Rails\s+([\d.]+)	body	Ruby on Rails	rubyonrails	rails
+^Django/([\d.]+)	body	Django	djangoproject	django
+Django\s+([\d.]+)	body	Django	djangoproject	django
+^Express/([\d.]+)	body	Express	expressjs	express
+Express\s+([\d.]+)	body	Express	expressjs	express
+^Laravel/([\d.]+)	body	Laravel	laravel	laravel
+Laravel\s+([\d.]+)	body	Laravel	laravel	laravel
+^Spring\s+Boot/([\d.]+)	body	Spring Boot	vmware	spring_boot
+Spring\s+Boot\s+([\d.]+)	body	Spring Boot	vmware	spring_boot
+^Symfony/([\d.]+)	body	Symfony	symfony	symfony
+Symfony\s+([\d.]+)	body	Symfony	symfony	symfony
+^CodeIgniter/([\d.]+)	body	CodeIgniter	codeigniter	codeigniter
+CodeIgniter\s+([\d.]+)	body	CodeIgniter	codeigniter	codeigniter
+^CakePHP/([\d.]+)	body	CakePHP	cakephp	cakephp
+CakePHP\s+([\d.]+)	body	CakePHP	cakephp	cakephp
+^Yii\s+Framework/([\d.]+)	body	Yii	yiisoft	yii
+Yii\s+([\d.]+)	body	Yii	yiisoft	yii
+^Zend\s+Framework/([\d.]+)	body	Zend Framework	zend	zend_framework
+Zend\s+Framework\s+([\d.]+)	body	Zend Framework	zend	zend_framework
+^Phalcon/([\d.]+)	body	Phalcon	phalcon	phalcon
+Phalcon\s+([\d.]+)	body	Phalcon	phalcon	phalcon
+^Hapi/([\d.]+)	body	Hapi	hapijs	hapi
+Hapi\s+([\d.]+)	body	Hapi	hapijs	hapi
+^Koa/([\d.]+)	body	Koa	koajs	koa
+Koa\s+([\d.]+)	body	Koa	koajs	koa
+^Sails/([\d.]+)	body	Sails	sailsjs	sails
+Sails\s+([\d.]+)	body	Sails	sailsjs	sails
+^NestJS/([\d.]+)	body	NestJS	nestjs	nestjs
+NestJS\s+([\d.]+)	body	NestJS	nestjs	nestjs
+^FastAPI/([\d.]+)	body	FastAPI	fastapi	fastapi
+FastAPI\s+([\d.]+)	body	FastAPI	fastapi	fastapi
+^Falcon/([\d.]+)	body	Falcon	falconry	falcon
+Falcon\s+([\d.]+)	body	Falcon	falconry	falcon
+^Pyramid/([\d.]+)	body	Pyramid	pylons	pyramid
+Pyramid\s+([\d.]+)	body	Pyramid	pylons	pyramid
+^Tornado/([\d.]+)	body	Tornado	tornadoweb	tornado
+Tornado\s+([\d.]+)	body	Tornado	tornadoweb	tornado
+^Bottle/([\d.]+)	body	Bottle	bottlepy	bottle
+Bottle\s+([\d.]+)	body	Bottle	bottlepy	bottle
+^CherryPy/([\d.]+)	body	CherryPy	cherrypy	cherrypy
+CherryPy\s+([\d.]+)	body	CherryPy	cherrypy	cherrypy
+^Sinatra/([\d.]+)	body	Sinatra	sinatrarb	sinatra
+Sinatra\s+([\d.]+)	body	Sinatra	sinatrarb	sinatra
+^Gin/([\d.]+)	body	Gin	gin-gonic	gin
+Gin\s+([\d.]+)	body	Gin	gin-gonic	gin
+^Echo/([\d.]+)	body	Echo	labstack	echo
+Echo\s+([\d.]+)	body	Echo	labstack	echo
+^Beego/([\d.]+)	body	Beego	beego	beego
+Beego\s+([\d.]+)	body	Beego	beego	beego
+^Revel/([\d.]+)	body	Revel	revel	revel
+Revel\s+([\d.]+)	body	Revel	revel	revel
+^Martini/([\d.]+)	body	Martini	martini	martini
+Martini\s+([\d.]+)	body	Martini	martini	martini
+^Fiber/([\d.]+)	body	Fiber	gofiber	fiber
+Fiber\s+([\d.]+)	body	Fiber	gofiber	fiber
+^MySQL/([\d.]+)	body	MySQL	oracle	mysql
+MySQL\s+([\d.]+)	body	MySQL	oracle	mysql
+^MariaDB/([\d.]+)	body	MariaDB	mariadb	mariadb
+MariaDB\s+([\d.]+)	body	MariaDB	mariadb	mariadb
+^PostgreSQL/([\d.]+)	body	PostgreSQL	postgresql	postgresql
+PostgreSQL\s+([\d.]+)	body	PostgreSQL	postgresql	postgresql
+^MongoDB/([\d.]+)	body	MongoDB	mongodb	mongodb
+MongoDB\s+([\d.]+)	body	MongoDB	mongodb	mongodb
+^Redis/([\d.]+)	body	Redis	redis	redis
+Redis\s+([\d.]+)	body	Redis	redis	redis
+^Elasticsearch/([\d.]+)	body	Elasticsearch	elastic	elasticsearch
+Elasticsearch\s+([\d.]+)	body	Elasticsearch	elastic	elasticsearch
+^Memcached/([\d.]+)	body	Memcached	memcached	memcached
+Memcached\s+([\d.]+)	body	Memcached	memcached	memcached
+^Cassandra/([\d.]+)	body	Cassandra	apache	cassandra
+Cassandra\s+([\d.]+)	body	Cassandra	apache	cassandra
+^CouchDB/([\d.]+)	body	CouchDB	apache	couchdb
+CouchDB\s+([\d.]+)	body	CouchDB	apache	couchdb
+^Neo4j/([\d.]+)	body	Neo4j	neo4j	neo4j
+Neo4j\s+([\d.]+)	body	Neo4j	neo4j	neo4j
+^RabbitMQ/([\d.]+)	body	RabbitMQ	rabbitmq	rabbitmq
+RabbitMQ\s+([\d.]+)	body	RabbitMQ	rabbitmq	rabbitmq
+^Kafka/([\d.]+)	body	Apache Kafka	apache	kafka
+Kafka\s+([\d.]+)	body	Apache Kafka	apache	kafka
+^ActiveMQ/([\d.]+)	body	ActiveMQ	apache	activemq
+ActiveMQ\s+([\d.]+)	body	ActiveMQ	apache	activemq
+^OpenSSL/([\d.]+[a-z]?)	body	OpenSSL	openssl	openssl
+OpenSSL\s+([\d.]+[a-z]?)	body	OpenSSL	openssl	openssl
+^GnuTLS/([\d.]+)	body	GnuTLS	gnutls	gnutls
+GnuTLS\s+([\d.]+)	body	GnuTLS	gnutls	gnutls
+^NSS/([\d.]+)	body	NSS	nss	nss
+NSS\s+([\d.]+)	body	NSS	nss	nss
+^mbed TLS/([\d.]+)	body	mbed TLS	arm	mbedtls
+mbed TLS\s+([\d.]+)	body	mbed TLS	arm	mbedtls
+^BoringSSL/([\d.]+)	body	BoringSSL	google	boringssl
+BoringSSL\s+([\d.]+)	body	BoringSSL	google	boringssl
+^WordPress/([\d.]+)	body	WordPress	wordpress	wordpress
+WordPress\s+([\d.]+)	body	WordPress	wordpress	wordpress
+^Joomla/([\d.]+)	body	Joomla	joomla	joomla
+Joomla\s+([\d.]+)	body	Joomla	joomla	joomla
+^Drupal/([\d.]+)	body	Drupal	drupal	drupal
+Drupal\s+([\d.]+)	body	Drupal	drupal	drupal
+^Magento/([\d.]+)	body	Magento	magento	magento
+Magento\s+([\d.]+)	body	Magento	magento	magento
+^PrestaShop/([\d.]+)	body	Prestashop	prestashop	prestashop
+PrestaShop\s+([\d.]+)	body	Prestashop	prestashop	prestashop
+^OpenCart/([\d.]+)	body	OpenCart	opencart	opencart
+OpenCart\s+([\d.]+)	body	OpenCart	opencart	opencart
+^osCommerce/([\d.]+)	body	osCommerce	oscommerce	oscommerce
+osCommerce\s+([\d.]+)	body	osCommerce	oscommerce	oscommerce
+^Zen Cart/([\d.]+)	body	Zen Cart	zencart	zencart
+Zen Cart\s+([\d.]+)	body	Zen Cart	zencart	zencart
+^TYPO3/([\d.]+)	body	TYPO3	typo3	typo3
+TYPO3\s+([\d.]+)	body	TYPO3	typo3	typo3
+^Concrete5/([\d.]+)	body	Concrete5	concretecms	concrete_cms
+Concrete5\s+([\d.]+)	body	Concrete5	concretecms	concrete_cms
+^ExpressionEngine/([\d.]+)	body	ExpressionEngine	expressionengine	expressionengine
+ExpressionEngine\s+([\d.]+)	body	ExpressionEngine	expressionengine	expressionengine
+^Grav/([\d.]+)	body	Grav	getgrav	grav
+Grav\s+([\d.]+)	body	Grav	getgrav	grav
+^Ghost/([\d.]+)	body	Ghost	ghost	ghost
+Ghost\s+([\d.]+)	body	Ghost	ghost	ghost
+^Umbraco/([\d.]+)	body	Umbraco	umbraco	umbraco_cms
+Umbraco\s+([\d.]+)	body	Umbraco	umbraco	umbraco_cms
+^Kentico CMS/([\d.]+)	body	Kentico CMS	kentico	kentico_cms
+Kentico CMS\s+([\d.]+)	body	Kentico CMS	kentico	kentico_cms
+^Sitefinity/([\d.]+)	body	Sitefinity	progress	sitefinity
+Sitefinity\s+([\d.]+)	body	Sitefinity	progress	sitefinity
+^HubSpot CMS/([\d.]+)	body	HubSpot CMS	hubspot	hubspot_cms
+HubSpot CMS\s+([\d.]+)	body	HubSpot CMS	hubspot	hubspot_cms
+^Strapi/([\d.]+)	body	Strapi	strapi	strapi
+Strapi\s+([\d.]+)	body	Strapi	strapi	strapi
+^Contentful/([\d.]+)	body	Contentful	contentful	contentful
+Contentful\s+([\d.]+)	body	Contentful	contentful	contentful
+^Sanity/([\d.]+)	body	Sanity	sanity	sanity
+Sanity\s+([\d.]+)	body	Sanity	sanity	sanity
+^Storyblok/([\d.]+)	body	Storyblok	storyblok	storyblok
+Storyblok\s+([\d.]+)	body	Storyblok	storyblok	storyblok
+^Webflow/([\d.]+)	body	Webflow	webflow	webflow
+Webflow\s+([\d.]+)	body	Webflow	webflow	webflow
+^Wix/([\d.]+)	body	Wix	wix	wix
+Wix\s+([\d.]+)	body	Wix	wix	wix
+^Squarespace/([\d.]+)	body	Squarespace	squarespace	squarespace
+Squarespace\s+([\d.]+)	body	Squarespace	squarespace	squarespace
+^React/([\d.]+)	body	React	meta	react
+React\s+([\d.]+)	body	React	meta	react
+^Vue\.js/([\d.]+)	body	Vue.js	vuejs	vue
+Vue\.js\s+([\d.]+)	body	Vue.js	vuejs	vue
+^AngularJS/([\d.]+)	body	AngularJS	google	angularjs
+AngularJS\s+([\d.]+)	body	AngularJS	google	angularjs
+^Angular/([\d.]+)	body	Angular	google	angular
+Angular\s+([\d.]+)	body	Angular	google	angular
+^jQuery/([\d.]+)	body	jQuery	jquery	jquery
+jQuery\s+([\d.]+)	body	jQuery	jquery	jquery
+^Bootstrap/([\d.]+)	body	Bootstrap	getbootstrap	bootstrap
+Bootstrap\s+([\d.]+)	body	Bootstrap	getbootstrap	bootstrap
+^Lodash/([\d.]+)	body	Lodash	lodash	lodash
+Lodash\s+([\d.]+)	body	Lodash	lodash	lodash
+^Axios/([\d.]+)	body	Axios	axios	axios
+Axios\s+([\d.]+)	body	Axios	axios	axios
+^webpack/([\d.]+)	body	webpack	webpack	webpack
+webpack\s+([\d.]+)	body	webpack	webpack	webpack
+^Svelte/([\d.]+)	body	Svelte	svelte	svelte
+Svelte\s+([\d.]+)	body	Svelte	svelte	svelte
+^SolidJS/([\d.]+)	body	SolidJS	solidjs	solidjs
+SolidJS\s+([\d.]+)	body	SolidJS	solidjs	solidjs
+^Alpine\.js/([\d.]+)	body	Alpine.js	alpinejs	alpine_js
+Alpine\.js\s+([\d.]+)	body	Alpine.js	alpinejs	alpine_js
+^Preact/([\d.]+)	body	Preact	preact	preact
+Preact\s+([\d.]+)	body	Preact	preact	preact
+^Ember\.js/([\d.]+)	body	Ember.js	emberjs	ember
+Ember\.js\s+([\d.]+)	body	Ember.js	emberjs	ember
+^Backbone\.js/([\d.]+)	body	Backbone.js	backbonejs	backbone
+Backbone\.js\s+([\d.]+)	body	Backbone.js	backbonejs	backbone
+^Underscore\.js/([\d.]+)	body	Underscore.js	underscore	underscore
+Underscore\.js\s+([\d.]+)	body	Underscore.js	underscore	underscore
+^Moment\.js/([\d.]+)	body	Moment.js	momentjs	moment
+Moment\.js\s+([\d.]+)	body	Moment.js	momentjs	moment
+^D3\.js/([\d.]+)	body	D3.js	d3	D3_js
+D3\.js\s+([\d.]+)	body	D3.js	d3	D3_js
+^Three\.js/([\d.]+)	body	three.js	threejs	three_js
+Three\.js\s+([\d.]+)	body	three.js	threejs	three_js
+^Chart\.js/([\d.]+)	body	Chart.js	chartjs	chart_js
+Chart\.js\s+([\d.]+)	body	Chart.js	chartjs	chart_js
+^Highcharts/([\d.]+)	body	Highcharts	highsoft	highcharts
+Highcharts\s+([\d.]+)	body	Highcharts	highsoft	highcharts
+^Leaflet/([\d.]+)	body	Leaflet	leaflet	leaflet
+Leaflet\s+([\d.]+)	body	Leaflet	leaflet	leaflet
+^Mapbox/([\d.]+)	body	Mapbox	mapbox	mapbox
+Mapbox\s+([\d.]+)	body	Mapbox	mapbox	mapbox
+^OpenLayers/([\d.]+)	body	OpenLayers	openlayers	openlayers
+OpenLayers\s+([\d.]+)	body	OpenLayers	openlayers	openlayers
+^Pixi\.js/([\d.]+)	body	PixiJS	pixijs	pixijs
+Pixi\.js\s+([\d.]+)	body	PixiJS	pixijs	pixijs
+^Phaser/([\d.]+)	body	Phaser	phaser	phaser
+Phaser\s+([\d.]+)	body	Phaser	phaser	phaser
+^Babylon\.js/([\d.]+)	body	Babylon.js	babylonjs	babylonjs
+Babylon\.js\s+([\d.]+)	body	Babylon.js	babylonjs	babylonjs
+Ammo\.js\s+([\d.]+)	body	Ammo.js	ammo	ammo
+^Ammo\.js/([\d.]+)	body	Ammo.js	ammo	ammo
+^Cannon\.js/([\d.]+)	body	Cannon.js	cannon	cannon_js
+Cannon\.js\s+([\d.]+)	body	Cannon.js	cannon	cannon_js
+^Oimo\.js/([\d.]+)	body	Oimo.js	oimo	oimo_js
+Oimo\.js\s+([\d.]+)	body	Oimo.js	oimo	oimo_js
+^Tween\.js/([\d.]+)	body	Tween.js	tweenjs	tween_js
+Tween\.js\s+([\d.]+)	body	Tween.js	tweenjs	tween_js
+^GSAP/([\d.]+)	body	GSAP	greensock	gsap
+GSAP\s+([\d.]+)	body	GSAP	greensock	gsap
+^Anime\.js/([\d.]+)	body	Anime.js	animejs	anime_js
+Anime\.js\s+([\d.]+)	body	Anime.js	animejs	anime_js
+^Velocity\.js/([\d.]+)	body	Velocity.js	julianshapiro	velocity
+Velocity\.js\s+([\d.]+)	body	Velocity.js	julianshapiro	velocity
+^Popper\.js/([\d.]+)	body	Popper.js	popper	popper
+Popper\.js\s+([\d.]+)	body	Popper.js	popper	popper
+^RxJS/([\d.]+)	body	RxJS	rxjs	rxjs
+RxJS\s+([\d.]+)	body	RxJS	rxjs	rxjs
+^Redux/([\d.]+)	body	Redux	redux	redux
+Redux\s+([\d.]+)	body	Redux	redux	redux
+^MobX/([\d.]+)	body	MobX	mobx	mobx
+MobX\s+([\d.]+)	body	MobX	mobx	mobx
+^Zustand/([\d.]+)	body	Zustand	zustand	zustand
+Zustand\s+([\d.]+)	body	Zustand	zustand	zustand
+^Jotai/([\d.]+)	body	Jotai	jotai	jotai
+Jotai\s+([\d.]+)	body	Jotai	jotai	jotai
+^Recoil/([\d.]+)	body	Recoil	recoil	recoil
+Recoil\s+([\d.]+)	body	Recoil	recoil	recoil
+^Apollo\s+Client/([\d.]+)	body	Apollo Client	apollographql	apollo_client
+Apollo\s+Client\s+([\d.]+)	body	Apollo Client	apollographql	apollo_client
+^React\s+Query/([\d.]+)	body	React Query	tanstack	react_query
+React\s+Query\s+([\d.]+)	body	React Query	tanstack	react_query
+^SWR/([\d.]+)	body	SWR	vercel	swr
+SWR\s+([\d.]+)	body	SWR	vercel	swr
+^React\s+Router/([\d.]+)	body	React Router	reactrouter	react_router
+React\s+Router\s+([\d.]+)	body	React Router	reactrouter	react_router
+^Vue\s+Router/([\d.]+)	body	Vue Router	vuejs	vue_router
+Vue\s+Router\s+([\d.]+)	body	Vue Router	vuejs	vue_router
+^i18next/([\d.]+)	body	i18next	i18next	i18next
+i18next\s+([\d.]+)	body	i18next	i18next	i18next
+^Day\.js/([\d.]+)	body	Day.js	dayjs	dayjs
+Day\.js\s+([\d.]+)	body	Day.js	dayjs	dayjs
+^date-fns/([\d.]+)	body	date-fns	datefns	date_fns
+date-fns\s+([\d.]+)	body	date-fns	datefns	date_fns
+^Luxon/([\d.]+)	body	Luxon	luxon	luxon
+Luxon\s+([\d.]+)	body	Luxon	luxon	luxon
+^Immer/([\d.]+)	body	Immer	immer	immer
+Immer\s+([\d.]+)	body	Immer	immer	immer
+^clsx/([\d.]+)	body	clsx	clsx	clsx
+clsx\s+([\d.]+)	body	clsx	clsx	clsx
+^classnames/([\d.]+)	body	classnames	classnames	classnames
+classnames\s+([\d.]+)	body	classnames	classnames	classnames
+^styled-components/([\d.]+)	body	styled-components	styled-components	styled_components
+styled-components\s+([\d.]+)	body	styled-components	styled-components	styled_components
+^emotion/([\d.]+)	body	emotion	emotion	emotion
+emotion\s+([\d.]+)	body	emotion	emotion	emotion
+^JSS/([\d.]+)	body	JSS	cssinjs	jss
+JSS\s+([\d.]+)	body	JSS	cssinjs	jss
+^Tailwind\s+CSS/([\d.]+)	body	Tailwind CSS	tailwindcss	tailwind
+Tailwind\s+CSS\s+([\d.]+)	body	Tailwind CSS	tailwindcss	tailwind
+^Bootstrap/([\d.]+)	body	Bootstrap	getbootstrap	bootstrap
+Bootstrap\s+([\d.]+)	body	Bootstrap	getbootstrap	bootstrap
+^Bulma/([\d.]+)	body	Bulma	bulma	bulma
+Bulma\s+([\d.]+)	body	Bulma	bulma	bulma
+^Foundation/([\d.]+)	body	Foundation	zurb	foundation
+Foundation\s+([\d.]+)	body	Foundation	zurb	foundation
+^Semantic\s+UI/([\d.]+)	body	Semantic UI	semantic-ui	semantic_ui
+Semantic\s+UI\s+([\d.]+)	body	Semantic UI	semantic-ui	semantic_ui
+^Materialize/([\d.]+)	body	Materialize	materialize	materialize
+Materialize\s+([\d.]+)	body	Materialize	materialize	materialize
+^UIKit/([\d.]+)	body	UIKit	uikit	uikit
+UIKit\s+([\d.]+)	body	UIKit	uikit	uikit
+^Pure\s+CSS/([\d.]+)	body	Pure CSS	yahoo	purecss
+Pure\s+CSS\s+([\d.]+)	body	Pure CSS	yahoo	purecss
+^Skeleton/([\d.]+)	body	Skeleton	skeleton	skeleton
+Skeleton\s+([\d.]+)	body	Skeleton	skeleton	skeleton
+^Milligram/([\d.]+)	body	Milligram	milligram	milligram
+Milligram\s+([\d.]+)	body	Milligram	milligram	milligram
+^Spectre\.css/([\d.]+)	body	Spectre.css	picturepan2	spectre
+Spectre\.css\s+([\d.]+)	body	Spectre.css	picturepan2	spectre
+^Primer/([\d.]+)	body	Primer	primer	primer
+Primer\s+([\d.]+)	body	Primer	primer	primer
+^Tachyons/([\d.]+)	body	Tachyons	tachyons	tachyons
+Tachyons\s+([\d.]+)	body	Tachyons	tachyons	tachyons
+^Base/([\d.]+)	body	Base	mrcoles	base
+Base\s+([\d.]+)	body	Base	mrcoles	base
+^Picnic/([\d.]+)	body	Picnic	picnic	picnic
+Picnic\s+([\d.]+)	body	Picnic	picnic	picnic
+^mini\.css/([\d.]+)	body	mini.css	minicss	mini_css
+mini\.css\s+([\d.]+)	body	mini.css	minicss	mini_css
+^Wing/([\d.]+)	body	Wing	kbrsh	wing
+Wing\s+([\d.]+)	body	Wing	kbrsh	wing
+^Cirrus/([\d.]+)	body	Cirrus	spiderweb962	cirrus
+Cirrus\s+([\d.]+)	body	Cirrus	spiderweb962	cirrus
+^Cutestrap/([\d.]+)	body	Cutestrap	cutestrap	cutestrap
+Cutestrap\s+([\d.]+)	body	Cutestrap	cutestrap	cutestrap
+^Mui/([\d.]+)	body	Mui	mui	mui
+Mui\s+([\d.]+)	body	Mui	mui	mui
+^Chakra\s+UI/([\d.]+)	body	Chakra UI	chakraui	chakra_ui
+Chakra\s+UI\s+([\d.]+)	body	Chakra UI	chakraui	chakra_ui
+^Ant\s+Design/([\d.]+)	body	Ant Design	antdesign	ant_design
+Ant\s+Design\s+([\d.]+)	body	Ant Design	antdesign	ant_design
+^Semantic\s+UI\s+React/([\d.]+)	body	Semantic UI React	semantic-ui-react	semantic_ui_react
+Semantic\s+UI\s+React\s+([\d.]+)	body	Semantic UI React	semantic-ui-react	semantic_ui_react
+^Material-UI/([\d.]+)	body	Material-UI	mui	material_ui
+Material-UI\s+([\d.]+)	body	Material-UI	mui	material_ui
+^React\s+Bootstrap/([\d.]+)	body	React Bootstrap	react-bootstrap	react_bootstrap
+React\s+Bootstrap\s+([\d.]+)	body	React Bootstrap	react-bootstrap	react_bootstrap
+^Reactstrap/([\d.]+)	body	Reactstrap	reactstrap	reactstrap
+Reactstrap\s+([\d.]+)	body	Reactstrap	reactstrap	reactstrap
+^Blueprint/([\d.]+)	body	Blueprint	palantir	blueprint
+Blueprint\s+([\d.]+)	body	Blueprint	palantir	blueprint
+^Evergreen/([\d.]+)	body	Evergreen	segmentio	evergreen
+Evergreen\s+([\d.]+)	body	Evergreen	segmentio	evergreen
+^Rebass/([\d.]+)	body	Rebass	rebass	rebass
+Rebass\s+([\d.]+)	body	Rebass	rebass	rebass
+^Grommet/([\d.]+)	body	Grommet	grommet	grommet
+Grommet\s+([\d.]+)	body	Grommet	grommet	grommet
+^Theme-UI/([\d.]+)	body	Theme-UI	theme-ui	theme_ui
+Theme-UI\s+([\d.]+)	body	Theme-UI	theme-ui	theme_ui
+^PrimeReact/([\d.]+)	body	PrimeReact	primereact	primereact
+PrimeReact\s+([\d.]+)	body	PrimeReact	primereact	primereact
+^Reactstrap/([\d.]+)	body	Reactstrap	reactstrap	reactstrap
+Reactstrap\s+([\d.]+)	body	Reactstrap	reactstrap	reactstrap
+^Fluent\s+UI/([\d.]+)	body	Fluent UI	microsoft	fluent_ui
+Fluent\s+UI\s+([\d.]+)	body	Fluent UI	microsoft	fluent_ui
+^Office\s+UI\s+Fabric/([\d.]+)	body	Office UI Fabric	microsoft	office_ui_fabric
+Office\s+UI\s+Fabric\s+([\d.]+)	body	Office UI Fabric	microsoft	office_ui_fabric
+^Shadcn-ui/([\d.]+)	body	Shadcn-ui	shadcn	shadcn_ui
+Shadcn-ui\s+([\d.]+)	body	Shadcn-ui	shadcn	shadcn_ui
+^Radix\s+UI/([\d.]+)	body	Radix UI	radix	radix_ui
+Radix\s+UI\s+([\d.]+)	body	Radix UI	radix	radix_ui
+^Headless\s+UI/([\d.]+)	body	Headless UI	headlessui	headless_ui
+Headless\s+UI\s+([\d.]+)	body	Headless UI	headlessui	headless_ui
+^Reach\s+UI/([\d.]+)	body	Reach UI	reach	reach_ui
+Reach\s+UI\s+([\d.]+)	body	Reach UI	reach	reach_ui
+^React-Query/([\d.]+)	body	React Query	tanstack	react_query
+React-Query\s+([\d.]+)	body	React Query	tanstack	react_query
+^SWR/([\d.]+)	body	SWR	vercel	swr
